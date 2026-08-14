@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+.venv/
+data/word-candidates.jsonl
+data/known-words.json
+data/frequency-report.json

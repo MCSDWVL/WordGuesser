@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A daily game of real and invented words.">
+    <title>Fake Words</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="game-shell">
+      <header>
+        <p class="eyebrow">Daily word game</p>
+        <h1>Fake Words</h1>
+        <p id="seed-label" class="seed-label"></p>
+      </header>
+
+      <section id="game" class="card" aria-live="polite">
+        <p id="status" class="status">Loading today’s words…</p>
+        <div id="round-content" hidden>
+          <p id="progress" class="progress"></p>
+          <h2 id="word" class="word" aria-label="Word to classify"></h2>
+          <p class="prompt">Is this a real English word?</p>
+          <div id="choices" class="choices">
+            <button type="button" data-answer="real">Real</button>
+            <button type="button" data-answer="fake">Fake</button>
+          </div>
+          <div id="feedback" class="feedback" role="status" aria-live="assertive"></div>
+          <button id="next" class="next" type="button" hidden>Next word</button>
+        </div>
+        <div id="result" hidden>
+          <p class="eyebrow">Final score</p>
+          <h2 id="score"></h2>
+          <p id="result-copy"></p>
+          <button id="replay" type="button">Play this seed again</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      Definitions are derived from Wiktionary data. This game is not affiliated with Wiktionary.
+    </footer>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
+
